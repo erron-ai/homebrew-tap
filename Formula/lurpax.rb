@@ -1,30 +1,30 @@
 class Lurpax < Formula
   desc "Encrypted snapshot vault CLI — zstd + XChaCha20-Poly1305 + Reed-Solomon"
   homepage "https://github.com/erron-ai/lurpax"
-  version "0.11.0"
+  version "0.11.1"
   license "MIT"
 
   on_macos do
     on_intel do
       url "https://github.com/erron-ai/lurpax/releases/download/v#{version}/lurpax-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "60c988c7b74b1f497514cffccb904fb561681cc744b0fe7406e6fe35fc622819"
+      sha256 "bdbe3157e5a4368c9b113735c058a3e02ba68318668a8b5342649e1040d93a91"
     end
 
     on_arm do
       url "https://github.com/erron-ai/lurpax/releases/download/v#{version}/lurpax-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "81b8ac60db0ced80bac529363e6e1d7b34a5c2b1a0fbafc72a5196e69dbcd5bf"
+      sha256 "2e51c0de86c0388f7763bc9bf81b26a12c6c58c4dc7bd6964c0a4b5e97258307"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/erron-ai/lurpax/releases/download/v#{version}/lurpax-v#{version}-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "425fe3e08b636a89333b645dcee6583fecb116a8dce27a11c67fc5ae397ededc"
+      sha256 "8cc6a86c838ffbad3dd1f42fd68c502f31cc1e9d5fe4fff4ca6af6a6a468a2ba"
     end
 
     on_arm do
       url "https://github.com/erron-ai/lurpax/releases/download/v#{version}/lurpax-v#{version}-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "1684e350d03d57f10ad5d61f922209c33c86fc081e949a7a690f1c743baadccb"
+      sha256 "182b1686fe0ccdc777f6b7ba0597d39d88a9bec85b6002cb87a0cc36ad413f64"
     end
   end
 
