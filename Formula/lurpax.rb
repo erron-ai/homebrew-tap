@@ -29,11 +29,9 @@ class Lurpax < Formula
   end
 
   def install
-    # Release tarballs are lurpax-<tag>-<triple>/lurpax (erron-ai/lurpax release workflow).
-    nested = Dir["lurpax-*/lurpax"].first
-    odie "lurpax binary not found (expected lurpax-*/lurpax in archive)" if nested.nil?
-
-    bin.install nested => "lurpax"
+    path = File.exist?("lurpax") ? "lurpax" : Dir["lurpax-*/lurpax"].first
+    odie "lurpax binary not found (expected lurpax or lurpax-*/lurpax in archive)" if path.nil?
+    bin.install path => "lurpax"
   end
 
   test do
